@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="mx-auto flex justify-between pt-10 lg:container">
       <div className="flex items-center gap-5">
-        <img src={logoImage} alt="" />
+        <img src={logoImage} alt="" className="h-10 w-10" />
         <h1 className="text-4xl font-semibold">ITORI</h1>
       </div>
       <nav className="flex items-center gap-5">
