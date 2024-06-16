@@ -11,16 +11,16 @@ const Header = () => {
         <img src={logoImage} alt="" />
         <h1 className="text-4xl font-semibold">ITORI</h1>
       </div>
-      <nav className="flex items-center">
-        <div className="flex gap-5 px-5">
+      <nav className="flex items-center gap-5">
+        <div className="flex gap-5 px-2">
           <img src={coffee} alt="" />
           <a href="/">Products</a>
         </div>
-        <div className="flex gap-5 px-5">
+        <div className="flex gap-5 px-2">
           <img src={enter} alt="" />
           <a href="/">Login</a>
         </div>
-        <div className="flex gap-5 px-5">
+        <div className="flex gap-5 px-2">
           <img src={help} alt="" />
           <a href="/">About</a>
         </div>
