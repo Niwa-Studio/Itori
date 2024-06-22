@@ -2,6 +2,7 @@ import React from "react";
 import shop1 from "../assets/images/gallery-shop.jpg";
 import shop2 from "../assets/images/gallery-shop-2.jpg";
 import shop3 from "../assets/images/gallery-shop-3.jpg";
+import Image from "./Gallery/Image";
 
 const Gallery = () => {
   return (
@@ -14,10 +15,24 @@ const Gallery = () => {
         </p>
       </div>
       <div className="flex h-[800px] self-stretch">
-        <img src={shop3} alt="" className="h-full basis-1/2 object-cover" />
+        <div className="basis-1/2">
+          <Image
+            name={"Downtown Branch"}
+            imageURL={shop3}
+            namePosition={{ y: "end", x: "end" }}
+          />
+        </div>
         <div className="flex basis-1/2 flex-col">
-          <img src={shop2} alt="" className="h-1/2 object-cover" />
-          <img src={shop1} alt="" className="h-1/2 object-cover" />
+          <Image
+            name={"Seaside Branch"}
+            imageURL={shop2}
+            namePosition={{ y: "end", x: "start" }}
+          />
+          <Image
+            name={"Mountain View Branch"}
+            imageURL={shop1}
+            namePosition={{ y: "start", x: "start" }}
+          />
         </div>
       </div>
     </div>
