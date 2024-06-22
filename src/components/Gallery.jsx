@@ -13,11 +13,11 @@ const Gallery = () => {
           every image tells a story of our love for coffee and community.
         </p>
       </div>
-      <div>
-        <img src={shop3} alt="" />
-        <div>
-          <img src={shop2} alt="" />
-          <img src={shop1} alt="" />
+      <div className="flex h-[800px] self-stretch">
+        <img src={shop3} alt="" className="h-full basis-1/2 object-cover" />
+        <div className="flex basis-1/2 flex-col">
+          <img src={shop2} alt="" className="h-1/2 object-cover" />
+          <img src={shop1} alt="" className="h-1/2 object-cover" />
         </div>
       </div>
     </div>
