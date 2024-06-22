@@ -3,7 +3,7 @@ import image from "../assets/images/homepage-coffee-pic.jpg";
 
 const Hero = () => {
   return (
-    <div className="mb-20 mt-16 flex gap-16">
+    <div className="mt-16 flex gap-16">
       <div className="h-[624px] w-3/5">
         <img src={image} alt="" className="h-full w-full object-cover" />
       </div>
