@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Featured from "./components/Featured";
+import Gallery from "./components/Gallery";
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
       <Header />
       <Hero />
       <Featured />
+      <Gallery />
     </>
   );
 }
