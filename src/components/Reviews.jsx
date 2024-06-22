@@ -6,7 +6,7 @@ const Reviews = () => {
   return (
     <div className="mx-auto my-20 flex flex-col items-center gap-10 lg:container">
       <h1 className="text-3xl font-bold">Our Customer Say</h1>
-      <div>
+      <div className="flex flex-col items-center">
         <Customer
           title={"Best Coffee in Town!"}
           message={
