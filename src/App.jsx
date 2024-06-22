@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Featured from "./components/Featured";
 import Gallery from "./components/Gallery";
 import Reviews from "./components/Reviews";
+import Footer from "./components/Footer";
 
 export function App() {
   return (
@@ -12,6 +13,7 @@ export function App() {
       <Featured />
       <Gallery />
       <Reviews />
+      <Footer />
     </>
   );
 }
