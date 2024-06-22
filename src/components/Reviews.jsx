@@ -1,20 +1,23 @@
 import React from "react";
 import Customer from "./Reviews/Customer";
-import alex from "../assets/images/alex-pic.jpg";
+import reviewsData from "../data/reviewsData.js";
 
 const Reviews = () => {
   return (
     <div className="mx-auto my-20 flex flex-col items-center gap-10 lg:container">
       <h1 className="text-3xl font-bold">Our Customer Say</h1>
-      <div className="flex flex-col items-center">
-        <Customer
-          title={"Best Coffee in Town!"}
-          message={
-            "“I absolutely love Itori Coffee Shop! The ambiance is perfect for both working and relaxing. The baristas are incredibly friendly, and the coffee is always top-notch. Their latte art is a lovely touch, and the pastries are always fresh and delicious. I highly recommend trying their seasonal specials. Itori is my go-to spot for coffee!“"
-          }
-          name={"Alex P."}
-          imageURL={alex}
-        />
+      <div className="flex flex-col items-center gap-10">
+        {reviewsData.map((review) => {
+          return (
+            <Customer
+              key={review.id}
+              name={review.name}
+              title={review.title}
+              message={review.message}
+              imageURL={review.imageURL}
+            />
+          );
+        })}
       </div>
     </div>
   );
