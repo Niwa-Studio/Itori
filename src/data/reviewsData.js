@@ -21,3 +21,5 @@ const reviewsData = [
     name: "Taylor S.",
   },
 ];
+
+export default reviewsData;
