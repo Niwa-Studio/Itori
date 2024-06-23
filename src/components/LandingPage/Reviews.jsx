@@ -1,6 +1,6 @@
 import React from "react";
-import Customer from "./Reviews/Customer";
-import reviewsData from "../data/reviewsData.js";
+import Customer from "./Reviews/Customer.jsx";
+import reviewsData from "../../data/reviewsData.js";
 
 const Reviews = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import shop1 from "../assets/images/gallery-shop.jpg";
-import shop2 from "../assets/images/gallery-shop-2.jpg";
-import shop3 from "../assets/images/gallery-shop-3.jpg";
+import shop1 from "../../assets/images/gallery-shop.jpg";
+import shop2 from "../../assets/images/gallery-shop-2.jpg";
+import shop3 from "../../assets/images/gallery-shop-3.jpg";
 import Image from "./Gallery/Image";
 
 const Gallery = () => {
