@@ -22,4 +22,34 @@ import muffins from "./muffins-img.jpg";
 import orangecarrotjuice from "./orange-carrot-juice-img.jpg";
 import strawberrybananasmoothie from "./strawberry-banana-smoothie-img.jpg";
 import turkeyavocadosandwich from "./turkey-avocado-sandwich-img.jpg";
-import veggiehummussandwhich from "./veggie-hummus-sandwhich-img.jpg";
+import veggiehummussandwich from "./veggie-hummus-sandwich.jpg";
+
+const productsImages = {
+  americano,
+  blacktea,
+  brownies,
+  cappuccino,
+  capresepanini,
+  chickencaesarwrap,
+  coldbrew,
+  cookies,
+  croissants,
+  espresso,
+  greendetoxjuice,
+  greentea,
+  herbaltea,
+  icedcoffee,
+  icedlatte,
+  icedmocha,
+  latte,
+  macchiato,
+  mangopineapplesmoothie,
+  matchagreentea,
+  muffins,
+  orangecarrotjuice,
+  strawberrybananasmoothie,
+  turkeyavocadosandwich,
+  veggiehummussandwich,
+};
+
+export default productsImages;
