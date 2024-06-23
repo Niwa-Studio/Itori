@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../assets/images/homepage-coffee-pic.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -19,9 +20,11 @@ const Hero = () => {
             yourself in the rich aromas and cozy ambiance of our shop, your new
             favorite spot to relax and unwind.
           </p>
-          <button className="self-center rounded-full bg-shapes-tertiary px-12 py-4 text-white">
-            Order Now
-          </button>
+          <Link to="/products" className="self-center">
+            <button className="rounded-full bg-shapes-tertiary px-12 py-4 text-white">
+              Order Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>
