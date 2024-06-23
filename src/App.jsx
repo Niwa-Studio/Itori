@@ -1,20 +1,22 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Featured from "./components/Featured";
-import Gallery from "./components/Gallery";
-import Reviews from "./components/Reviews";
-import Footer from "./components/Footer";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+
+import LandingPage from "./pages/LandingPage";
+import HFLayout from "./layouts/HFLayout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<HFLayout />}>
+      <Route index element={<LandingPage />} />
+    </Route>,
+  ),
+);
 
 export function App() {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <Featured />
-      <Gallery />
-      <Reviews />
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 export default App;
