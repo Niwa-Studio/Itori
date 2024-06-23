@@ -1,10 +1,10 @@
 import React from "react";
-import icedLatte from "../assets/images/iced-latte-pic.jpg";
-import croissant from "../assets/images/croissant-pic.jpg";
-import smoothie from "../assets/images/smothie-pic.jpg";
+import icedLatte from "../../assets/images/iced-latte-pic.jpg";
+import croissant from "../../assets/images/croissant-pic.jpg";
+import smoothie from "../../assets/images/smothie-pic.jpg";
 import Product from "./Featured/Product";
-import left from "../assets/icons/left-arrow.svg";
-import right from "../assets/icons/right-arrow.svg";
+import left from "../../assets/icons/left-arrow.svg";
+import right from "../../assets/icons/right-arrow.svg";
 
 const Featured = () => {
   return (
