@@ -1,6 +1,6 @@
 import React from "react";
-import productsImages from "../assets/images/products/productURLs.js";
 import Product from "../components/ProductsPage/Product";
+import products from "../data/productsData.js";
 
 const ProductsPage = () => {
   return (
