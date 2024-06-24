@@ -2,6 +2,7 @@ import React from "react";
 import banner from "../assets/images/about/about-us-banner-pic.jpg";
 import ourCoffeeImg from "../assets/images/about/our-coffee-img.jpg";
 import ourStoryImg from "../assets/images/about/our-story-pic.jpg";
+import itoriTeamPic from "../assets/images/about/itori-team-pic.jpg";
 
 const AboutPage = () => {
   return (
@@ -9,7 +10,7 @@ const AboutPage = () => {
       <div className="mb-10 mt-16 h-[25rem]">
         <img src={banner} alt="" className="h-full w-full object-cover" />
       </div>
-      <div className="mx-auto flex flex-col items-center gap-10 lg:container">
+      <div className="mx-auto mb-40 flex flex-col items-center gap-10 lg:container">
         <h1 className="text-3xl font-semibold">About Us</h1>
         <div className="flex gap-10">
           <div className="flex-1">
@@ -63,6 +64,64 @@ const AboutPage = () => {
               commitment to quality. Our journey continues as we strive to
               innovate and expand, always keeping our customers' satisfaction at
               the heart of everything we do.
+            </p>
+          </div>
+        </div>
+        <div>
+          <h2 className="text-2xl font-semibold">Our Mission</h2>
+          <p>
+            Itori Coffee Shop was born out of a shared love for coffee and a
+            vision to create a community hub where people can connect and enjoy
+            quality time together. Founded in 2024, our journey started with a
+            small team of coffee enthusiasts who believed in the power of a
+            great cup of coffee to bring people together.
+            <br />
+            <br />
+            From our humble beginnings, we have grown into a beloved local
+            favorite, known for our exceptional coffee, warm atmosphere, and
+            commitment to quality. Our journey continues as we strive to
+            innovate and expand, always keeping our customers' satisfaction at
+            the heart of everything we do.
+          </p>
+        </div>
+        <div>
+          <img
+            src={itoriTeamPic}
+            alt=""
+            className="mb-10 h-[537px] w-full object-cover object-top"
+          />
+          <div>
+            <h2 className="mb-5 text-2xl font-semibold">The Itori Team</h2>
+            <p>
+              Behind every great cup of coffee is a team of passionate
+              individuals who bring our vision to life. The Itori team is made
+              up of skilled baristas, dedicated roasters, and friendly staff who
+              are all committed to providing the best possible experience for
+              our customers.
+              <br />
+              <br />
+              <li>
+                <span className="font-bold">Our Baristas:</span> Trained to
+                perfection, our baristas craft each beverage with care and
+                precision, ensuring every cup meets our high standards.
+              </li>
+              <li>
+                <span className="font-bold">Our Roasters:</span> With a deep
+                understanding of the art and science of coffee roasting, our
+                roasters bring out the best in every bean.
+              </li>
+              <li>
+                <span className="font-bold">Our Support Staff:</span> From the
+                front of house to behind the scenes, our support staff work
+                tirelessly to ensure smooth operations and a welcoming
+                atmosphere.
+              </li>
+              <br />
+              <br />
+              At Itori, we believe in the power of teamwork and the importance
+              of each individual's contribution to our success. Together, we
+              strive to create a memorable coffee experience for every customer
+              who walks through our doors.
             </p>
           </div>
         </div>
