@@ -1,6 +1,6 @@
 import React from "react";
 
-const Product = ({ product: { name, imageURL, price } }) => {
+const Product = ({ product: { name, imageURL, price }, onClick }) => {
   return (
     <div className="col-span-3">
       <div>
