@@ -20,9 +20,13 @@ const ProductsPage = () => {
         </div>
         <div className="flex flex-col gap-20 bg-shapes-grey-3 p-16">
           <div>
-            <h2 className="text-2xl font-semibold">Espresso Drinks</h2>
-            <div>
-              <Product />
+            <h2 className="mb-5 text-2xl font-semibold">Espresso Drinks</h2>
+            <div className="grid grid-cols-12 gap-x-5 gap-y-10">
+              <Product imageURL={products[0].imageURL} />
+              <Product imageURL={products[0].imageURL} />
+              <Product imageURL={products[0].imageURL} />
+              <Product imageURL={products[0].imageURL} />
+              <Product imageURL={products[0].imageURL} />
             </div>
           </div>
         </div>
