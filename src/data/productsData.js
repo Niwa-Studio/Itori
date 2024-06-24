@@ -113,14 +113,14 @@ const products = [
   },
   {
     id: "xt37mT8dgyj6ym8Dn",
-    type: "espresso",
+    type: "espresso drinks",
     name: "Latte",
     price: "0.00",
     imageURL: "/src/assets/images/products/latte-img.jpg",
   },
   {
     id: "iop0UuWNrf",
-    type: "espresso",
+    type: "espresso drinks",
     name: "Macchiato",
     price: "0.00",
     imageURL: "/src/assets/images/products/macchiato-img.jpg",

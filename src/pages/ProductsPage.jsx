@@ -23,7 +23,23 @@ const ProductsPage = () => {
             <h2 className="mb-5 text-2xl font-semibold">Espresso Drinks</h2>
             <div className="grid grid-cols-12 gap-x-5 gap-y-10">
               {products.map((product) => {
-                return <Product key={product.id} product={product} />;
+                return (
+                  product.type === "espresso drinks" && (
+                    <Product key={product.id} product={product} />
+                  )
+                );
+              })}
+            </div>
+          </div>
+          <div>
+            <h2 className="mb-5 text-2xl font-semibold">Iced Coffees</h2>
+            <div className="grid grid-cols-12 gap-x-5 gap-y-10">
+              {products.map((product) => {
+                return (
+                  product.type === "iced coffees" && (
+                    <Product key={product.id} product={product} />
+                  )
+                );
               })}
             </div>
           </div>
