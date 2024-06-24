@@ -11,7 +11,7 @@ const Product = ({ product: { name, imageURL, price }, onClick }) => {
         />
       </div>
       <div className="bg-shapes-grey-4 flex flex-col items-center rounded-b-lg">
-        <div className="flex flex-col items-center p-5 pb-0">
+        <div className="flex flex-col items-center p-5 pb-0 text-center">
           <h2 className="mb-2 text-2xl font-semibold">{name}</h2>
           <span>PHP {price}</span>
         </div>

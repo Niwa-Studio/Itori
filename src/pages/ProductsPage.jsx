@@ -3,12 +3,20 @@ import { useState } from "react";
 import Product from "../components/ProductsPage/Product";
 import products from "../data/productsData.js";
 
+const categoryTypes = {
+  coffees: ["Espresso Drinks", "Iced Coffees"],
+  pastries: ["Pastries & Snacks", "Sandwiches & Wraps"],
+  others: ["Tea Selection", "Smoothies and Fresh Juices"],
+};
+
 const ProductsPage = () => {
   const [category, setCategory] = useState("coffees");
 
   function handleCategoryChange(newCategory) {
     setCategory(newCategory);
   }
+
+  const types = categoryTypes[category];
 
   return (
     <section className="mb-40 mt-16 flex flex-col items-center gap-10">
@@ -49,11 +57,11 @@ const ProductsPage = () => {
         </div>
         <div className="flex flex-col gap-20 bg-shapes-grey-3 p-16">
           <div>
-            <h2 className="mb-5 text-2xl font-semibold">Espresso Drinks</h2>
+            <h2 className="mb-5 text-2xl font-semibold">{types[0]}</h2>
             <div className="grid grid-cols-12 gap-x-5 gap-y-10">
               {products.map((product) => {
                 return (
-                  product.type === "espresso drinks" && (
+                  product.type === types[0] && (
                     <Product key={product.id} product={product} />
                   )
                 );
@@ -61,11 +69,11 @@ const ProductsPage = () => {
             </div>
           </div>
           <div>
-            <h2 className="mb-5 text-2xl font-semibold">Iced Coffees</h2>
+            <h2 className="mb-5 text-2xl font-semibold">{types[1]}</h2>
             <div className="grid grid-cols-12 gap-x-5 gap-y-10">
               {products.map((product) => {
                 return (
-                  product.type === "iced coffees" && (
+                  product.type === types[1] && (
                     <Product key={product.id} product={product} />
                   )
                 );
