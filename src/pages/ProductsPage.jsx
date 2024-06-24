@@ -22,11 +22,9 @@ const ProductsPage = () => {
           <div>
             <h2 className="mb-5 text-2xl font-semibold">Espresso Drinks</h2>
             <div className="grid grid-cols-12 gap-x-5 gap-y-10">
-              <Product imageURL={products[0].imageURL} />
-              <Product imageURL={products[0].imageURL} />
-              <Product imageURL={products[0].imageURL} />
-              <Product imageURL={products[0].imageURL} />
-              <Product imageURL={products[0].imageURL} />
+              {products.map((product) => {
+                return <Product key={product.id} product={product} />;
+              })}
             </div>
           </div>
         </div>
