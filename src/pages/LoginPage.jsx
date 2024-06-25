@@ -35,16 +35,27 @@ const LoginPage = () => {
               <label htmlFor="password" className="block">
                 Password
               </label>
-              <div>
+              <div className="relative">
                 <input
                   type="text"
                   id="password"
                   placeholder="Enter your password..."
                   className="w-full rounded-3xl bg-shapes-grey-4 px-7 py-2"
                 />
-                <img src={eye} alt="" />
+                <img
+                  src={eye}
+                  alt=""
+                  className="absolute right-4 top-1/2 -translate-y-1/2"
+                />
               </div>
             </div>
+            <button className="self-center rounded-full bg-[#5C3F32] px-20 py-3 text-[18px] font-semibold italic text-white">
+              Login
+            </button>
+            <div className="h-[2px] w-[270px] self-center bg-black"></div>
+            <span className="self-center">
+              Don’t have an account yet? Register
+            </span>
           </form>
         </div>
       </div>
