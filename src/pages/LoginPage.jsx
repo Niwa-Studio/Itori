@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import login from "../assets/images/about/coffee-shop-img.jpg";
 import arrow from "../assets/icons/left-arrow.svg";
 import eye from "../assets/icons/eye.svg";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
@@ -53,9 +54,9 @@ const LoginPage = () => {
               Login
             </button>
             <div className="h-[2px] w-[270px] self-center bg-black"></div>
-            <span className="self-center">
+            <Link to="/signup" className="self-center">
               Don’t have an account yet? Register
-            </span>
+            </Link>
           </form>
         </div>
       </div>
