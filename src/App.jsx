@@ -16,12 +16,14 @@ import SignUpPage from "./pages/SignUpPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<HFLayout />}>
-      <Route index element={<LandingPage />} />
-      <Route path="/products" element={<ProductsPage />} />
-      <Route path="/orders" element={<OrdersPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/settings" element={<SettingsPage />} />
+    <Route path="/">
+      <Route element={<HFLayout />}>
+        <Route index element={<LandingPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+      </Route>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />,
     </Route>,
