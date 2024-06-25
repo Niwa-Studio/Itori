@@ -19,10 +19,10 @@ const LoginPage = () => {
           }}
         ></div>
         <div className="flex basis-5/12 flex-col gap-10 pb-20 pe-16 ps-12 pt-10">
-          <button className="flex gap-5 self-start">
+          <Link to="/" className="flex gap-5 self-start">
             <img src={arrow} alt="" />
             Back
-          </button>
+          </Link>
           <form action="" className="flex flex-col gap-10">
             <h1 className="text-center text-3xl font-semibold">Login</h1>
             <div className="mx-5">
