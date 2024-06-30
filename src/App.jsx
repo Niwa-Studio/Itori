@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import HFLayout from "./layouts/HFLayout";
+import HeaderLayout from "./layouts/HeaderLayout";
 import LandingPage from "./pages/LandingPage";
 import ProductsPage from "./pages/ProductsPage";
 import OrdersPage from "./pages/OrdersPage";
@@ -13,6 +14,7 @@ import AboutPage from "./pages/AboutPage";
 import SettingsPage from "./pages/SettingsPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,7 +26,10 @@ const router = createBrowserRouter(
         <Route path="/about" element={<AboutPage />} />
         <Route path="/settings" element={<SettingsPage />} />
       </Route>
-      <Route path="/login" element={<LoginPage />} />
+      <Route element={<HeaderLayout />}>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+      </Route>
       <Route path="/signup" element={<SignUpPage />} />,
     </Route>,
   ),

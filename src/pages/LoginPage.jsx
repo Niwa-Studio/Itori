@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../components/Header";
 import login from "../assets/images/about/coffee-shop-img.jpg";
 import arrow from "../assets/icons/left-arrow.svg";
 import eye from "../assets/icons/eye.svg";
@@ -8,7 +7,6 @@ import { Link } from "react-router-dom";
 const LoginPage = () => {
   return (
     <div className="flex h-screen flex-col items-stretch">
-      <Header />
       <div className="mt-16 flex flex-1">
         <div
           className="basis-7/12"
