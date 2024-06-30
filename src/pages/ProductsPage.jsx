@@ -56,7 +56,7 @@ const ProductsPage = () => {
           </button>
         </div>
         <div className="flex flex-col gap-20 bg-shapes-grey-3 p-16">
-          <div>
+          <div className="mx-auto lg:container">
             <h2 className="mb-5 text-2xl font-semibold">{types[0]}</h2>
             <div className="grid grid-cols-12 gap-x-5 gap-y-10">
               {products.map((product) => {
