@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import filter from "../assets/icons/filter.svg";
 import edit from "../assets/icons/edit.svg";
 import arrowdown from "../assets/icons/arrow-down.svg";
+import arrowup from "../assets/icons/arrow-up.svg";
 import preparingIcon from "../assets/icons/preparing.svg";
 import deliveredIcon from "../assets/icons/delivered.svg";
 import cancelledIcon from "../assets/icons/cancelled.svg";
@@ -48,16 +49,40 @@ const Status = ({ status: { bgcolor, color, icon, text } }) => {
   );
 };
 
-const Order = ({ status, order, datetime }) => {
+const Product = () => {
   return (
-    <div className="flex justify-between rounded-lg bg-shapes-grey-3 px-10 py-7">
-      <div className="flex items-center gap-10">
-        <Status status={status} />
-        <span>Order #65758 | Espresso, Croissant, Muffins</span>
+    <div className="flex justify-between">
+      <div className="flex gap-24">
+        <span>1 pcs</span>
+        <span>N/A</span>
+        <span>Small - 12 oz | 354.9 ml</span>
       </div>
-      <div className="flex items-center gap-10">
-        <span>June 21, 2024 | 1:28 pm</span>
-        <img src={arrowdown} alt="" />
+      <span>₱ 0.00</span>
+    </div>
+  );
+};
+
+const Order = ({ status, order, datetime }) => {
+  const [isExtended, setIsExtended] = useState(false);
+
+  return (
+    <div className="flex flex-col gap-10 rounded-lg bg-shapes-grey-3 px-10 py-7">
+      <div className="flex justify-between">
+        <div className="flex items-center gap-10">
+          <Status status={status} />
+          <span>Order #65758 | Espresso, Croissant, Muffins</span>
+        </div>
+        <div className="flex items-center gap-10">
+          <span>June 21, 2024 | 1:28 pm</span>
+          <img src={arrowdown} alt="" />
+        </div>
+      </div>
+
+      <div className="h-px bg-black"></div>
+      <div>
+        <Product />
+        <Product />
+        <Product />
       </div>
     </div>
   );
