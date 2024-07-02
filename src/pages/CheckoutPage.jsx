@@ -29,7 +29,8 @@ const Cart = () => {
         <h1 className="text-3xl font-semibold">Cart</h1>
         <img src={edit} alt="" />
       </div>
-      <div>
+      <div className="flex flex-col gap-5">
+        <Product />
         <Product />
       </div>
     </div>
