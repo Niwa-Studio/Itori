@@ -66,7 +66,10 @@ const Order = ({ status, order, datetime }) => {
   const [isExtended, setIsExtended] = useState(false);
 
   return (
-    <div className="flex flex-col gap-10 rounded-lg bg-shapes-grey-3 px-10 py-7">
+    <div
+      className="flex flex-col gap-10 rounded-lg bg-shapes-grey-3 px-10 py-7"
+      onClick={() => setIsExtended(!isExtended)}
+    >
       <div className="flex justify-between">
         <div className="flex items-center gap-10">
           <Status status={status} />
@@ -78,11 +81,26 @@ const Order = ({ status, order, datetime }) => {
         </div>
       </div>
 
-      <div className="h-px bg-black"></div>
-      <div>
-        <Product />
-        <Product />
-        <Product />
+      <div className={`flex-col gap-10 ${isExtended ? "flex" : "hidden"}`}>
+        <div className="h-px bg-black"></div>
+        <div className="flex flex-col gap-2">
+          <Product />
+          <Product />
+          <Product />
+          <div className="h-px bg-black"></div>
+          <div className="flex justify-between">
+            Total
+            <span>₱ 0.00</span>
+          </div>
+        </div>
+        <div className="flex gap-5 self-end">
+          <button className="bg-delivered text-font-delivered rounded-full px-9 py-2">
+            Delete
+          </button>
+          <button className="bg-cancelled text-font-cancelled rounded-full px-11 py-2">
+            Cancel Order
+          </button>
+        </div>
       </div>
     </div>
   );
