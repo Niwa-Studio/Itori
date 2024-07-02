@@ -41,8 +41,8 @@ const Cart = () => {
 
 const OrderSummary = () => {
   return (
-    <div className="flex flex-1 gap-10 rounded-lg bg-shapes-grey-3 px-10 py-16">
-      <div className="flex flex-1 flex-col gap-7">
+    <div className="flex min-h-[840px] flex-1 flex-col gap-10 rounded-lg bg-shapes-grey-3 px-10 py-16">
+      <div className="flex flex-col gap-7">
         <h1 className="text-2xl font-semibold">Payment Method</h1>
         <div className="flex flex-col gap-5">
           <button className="bg-shapes-grey-4">
@@ -70,6 +70,27 @@ const OrderSummary = () => {
             </label>
           </button>
         </div>
+      </div>
+      <div>
+        <h2 className="mb-7 text-2xl font-semibold">Order Summary</h2>
+        <div className="mb-10 flex flex-col gap-5">
+          <div className="flex justify-between">
+            <span>Subtotal &#40;2 items&#41;</span>
+            <span>₱ 0.00</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Shipping Fee</span>
+            <span>₱ 0.00</span>
+          </div>
+          <div className="h-px bg-black"></div>
+          <div className="flex justify-between">
+            <span>Total</span>
+            <span>₱ 0.00</span>
+          </div>
+        </div>
+        <button className="w-full rounded-full bg-shapes-tertiary py-4 text-[18px] font-bold italic text-white">
+          Place Order
+        </button>
       </div>
     </div>
   );
