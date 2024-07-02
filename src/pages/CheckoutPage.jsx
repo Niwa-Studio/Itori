@@ -1,5 +1,7 @@
 import React from "react";
 import edit from "../assets/icons/edit.svg";
+import truck from "../assets/icons/truck.svg";
+import paypal from "../assets/icons/paypal-logo-img.png";
 import productsData from "../data/productsData.js";
 
 const { imageURL, name, price } = productsData[0];
@@ -37,11 +39,47 @@ const Cart = () => {
   );
 };
 
+const OrderSummary = () => {
+  return (
+    <div className="flex flex-1 gap-10 rounded-lg bg-shapes-grey-3 px-10 py-16">
+      <div className="flex flex-1 flex-col gap-7">
+        <h1 className="text-2xl font-semibold">Payment Method</h1>
+        <div className="flex flex-col gap-5">
+          <button className="bg-shapes-grey-4">
+            <label
+              htmlFor="COD"
+              className="flex cursor-pointer justify-between px-7 py-5"
+            >
+              <div className="flex gap-5">
+                <img src={truck} alt="" />
+                Cash On Delivery
+              </div>
+              <input type="radio" name="payment" id="COD" />
+            </label>
+          </button>
+          <button className="bg-shapes-grey-4">
+            <label
+              htmlFor="paypal"
+              className="flex cursor-pointer justify-between px-7 py-5"
+            >
+              <div className="flex gap-5">
+                <img src={paypal} alt="" className="w-6 rounded-full" />
+                Paypal
+              </div>
+              <input type="radio" name="payment" id="paypal" />
+            </label>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const CheckoutPage = () => {
   return (
     <div className="mx-auto mt-[70px] flex gap-8 lg:container">
       <Cart />
-      <div className="basis-[53%] outline outline-1"></div>
+      <OrderSummary />
     </div>
   );
 };
