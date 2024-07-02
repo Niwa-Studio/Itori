@@ -35,12 +35,15 @@ const statuses = {
 };
 
 const Status = ({ status: { bgcolor, color, icon, text } }) => {
+  const backgroundColor = "bg-" + bgcolor;
+  const fontColor = "text-" + color;
+
   return (
     <div
-      className={`flex gap-[10px] rounded-full px-5 py-2 bg-${bgcolor} min-w-[210px] justify-center`}
+      className={`flex min-w-[210px] justify-center gap-[10px] rounded-full px-5 py-2 ${backgroundColor}`}
     >
       <img src={icon} alt="" />
-      <span className={`text-[18px] text-${color}`}>{text}</span>
+      <span className={`text-[18px] ${fontColor}`}>{text}</span>
     </div>
   );
 };
@@ -72,8 +75,10 @@ const OrdersPage = () => {
       </div>
       <div className="flex flex-col gap-10">
         <span>Today</span>
-        <div>
+        <div className="flex flex-col gap-5">
           <Order status={statuses.preparing} />
+          <Order status={statuses.shipping} />
+          <Order status={statuses.delivered} />
         </div>
       </div>
     </div>
