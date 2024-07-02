@@ -22,13 +22,13 @@ const router = createBrowserRouter(
       <Route element={<HFLayout />}>
         <Route index element={<LandingPage />} />
         <Route path="/products" element={<ProductsPage />} />
-        <Route path="/orders" element={<OrdersPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/settings" element={<SettingsPage />} />
       </Route>
       <Route element={<HeaderLayout />}>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
       </Route>
       <Route path="/signup" element={<SignUpPage />} />,
     </Route>,
