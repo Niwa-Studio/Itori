@@ -65,7 +65,7 @@ const Order = ({ status, order, datetime }) => {
 
 const OrdersPage = () => {
   return (
-    <div className="mx-auto mt-16 lg:container">
+    <div className="mx-auto mb-10 mt-16 lg:container">
       <div className="mb-10 flex justify-between">
         <h1 className="text-3xl font-semibold">Orders</h1>
         <div className="flex items-center gap-5">
@@ -74,11 +74,20 @@ const OrdersPage = () => {
         </div>
       </div>
       <div className="flex flex-col gap-10">
-        <span>Today</span>
         <div className="flex flex-col gap-5">
-          <Order status={statuses.preparing} />
-          <Order status={statuses.shipping} />
-          <Order status={statuses.delivered} />
+          <span>Today</span>
+          <div className="flex flex-col gap-5">
+            <Order status={statuses.preparing} />
+            <Order status={statuses.shipping} />
+            <Order status={statuses.delivered} />
+          </div>
+        </div>
+        <div className="flex flex-col gap-5">
+          <span>Yesterday</span>
+          <div className="flex flex-col gap-5">
+            <Order status={statuses.delivered} />
+            <Order status={statuses.cancelled} />
+          </div>
         </div>
       </div>
     </div>
