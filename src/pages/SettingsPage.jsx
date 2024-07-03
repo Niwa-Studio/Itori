@@ -17,7 +17,7 @@ const Detail = ({ col1, col2 }) => {
 
 const SettingsPage = () => {
   return (
-    <div className="mt-16">
+    <div className="mb-24 mt-16">
       <h1 className="mx-auto mb-10 text-3xl font-semibold lg:container">
         Settings
       </h1>
@@ -36,6 +36,16 @@ const SettingsPage = () => {
             <div className="flex flex-col gap-5 rounded-lg bg-shapes-grey-4 p-10">
               <Detail col1={"Username"} col2={"shino45_"} />
               <Detail col1={"Password"} col2={"********"} />
+            </div>
+            <div className="flex flex-col gap-5 rounded-lg bg-shapes-grey-4 p-10">
+              <span>Account Deletion</span>
+              <div className="flex justify-between">
+                <span className="text-[#6C6C6C]">
+                  This action is irreversible and will result in the permanent
+                  loss of all your data
+                </span>
+                <span className="text-font-cancelled">Delete Account</span>
+              </div>
             </div>
           </div>
         </div>
